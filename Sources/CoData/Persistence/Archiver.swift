@@ -2,9 +2,9 @@ import Futura
 
 public protocol Archiver {
     /// Archives data to disk
-    func archive<Data: Codable>(_ data: Stored<Data>) -> Future<Void>
+    func archive<Record: Codable>(_ data: Stored<Record>) -> Future<Void>
     /// Restores data from disk
-    func restore<Data: Codable>(_ storageID: StorageID<Data>) -> Future<Data>
+    func restore<Record: Codable>(_ storageID: StorageID<Record>) -> Future<Record>
     /// Restores all data of given type from disk
-    func restoreAll<Data: Codable>(_ type: Data.Type) -> Future<Stored<Data>>
+    func restoreAll<Record: Codable>(_ type: Record.Type) -> Future<Stored<Record>>
 }

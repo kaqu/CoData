@@ -22,3 +22,9 @@ internal final class ArchiveDecoder: Decoder {
         fatalError()
     }
 }
+
+struct User: Codable {
+    var name: String
+    var surname: String
+    var age: UInt8
+}

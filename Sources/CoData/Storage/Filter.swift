@@ -1,81 +1,89 @@
 import Foundation
 
-public struct Filter<Data> {
-    internal let filter: (Data) -> Bool
+public struct Filter<Record> {
+    public static var all: Filter<Record> { return .init { _ in true } }
+    
+    internal let filter: (Record) -> Bool
 
-    public init(_ filter: @escaping (Data) -> Bool) {
+    public init(_ filter: @escaping (Record) -> Bool) {
         self.filter = filter
     }
 
-    public init(_ filters: Filter<Data>...) {
+    public init(_ filters: Filter<Record>...) {
         self.filter = { data in
             filters.reduce(into: true, { result, filter in
                 result = result && filter.filter(data)
             })
         }
     }
+}
 
-    internal init<T: Equatable>(_ keyPath: KeyPath<Data, T>, equal value: T) {
+internal extension Filter {
+    init<Value: Equatable>(_ keyPath: KeyPath<Record, Value>, equal value: Value) {
         self.filter = { data in
             data[keyPath: keyPath] == value
         }
     }
 
-    internal init<T: Equatable>(_ keyPath: KeyPath<Data, T>, notEqual value: T) {
+    init<Value: Equatable>(_ keyPath: KeyPath<Record, Value>, notEqual value: Value) {
         self.filter = { data in
             data[keyPath: keyPath] != value
         }
     }
 
-    internal init<T: Comparable>(_ keyPath: KeyPath<Data, T>, lessThan value: T) {
+    init<Value: Comparable>(_ keyPath: KeyPath<Record, Value>, lessValuehan value: Value) {
         self.filter = { data in
             data[keyPath: keyPath] < value
         }
     }
 
-    internal init<T: Comparable>(_ keyPath: KeyPath<Data, T>, lessThanOrEqual value: T) {
+    init<Value: Comparable>(_ keyPath: KeyPath<Record, Value>, lessValuehanOrEqual value: Value) {
         self.filter = { data in
             data[keyPath: keyPath] <= value
         }
     }
 
-    internal init<T: Comparable>(_ keyPath: KeyPath<Data, T>, greaterThan value: T) {
+    init<Value: Comparable>(_ keyPath: KeyPath<Record, Value>, greaterValuehan value: Value) {
         self.filter = { data in
             data[keyPath: keyPath] > value
         }
     }
 
-    internal init<T: Comparable>(_ keyPath: KeyPath<Data, T>, greaterThanOrEqual value: T) {
+    init<Value: Comparable>(_ keyPath: KeyPath<Record, Value>, greaterValuehanOrEqual value: Value) {
         self.filter = { data in
             data[keyPath: keyPath] >= value
         }
     }
 }
 
-public func == <Data: Codable, T: Equatable>(_ lhs: KeyPath<Data, T>, _ rhs: T) -> Filter<Data> {
+public extension Decodable {
+    static var all: Filter<Self> { return .init { _ in true } }
+}
+
+public func == <Record: Codable, Value: Equatable>(_ lhs: KeyPath<Record, Value>, _ rhs: Value) -> Filter<Record> {
     return .init(lhs, equal: rhs)
 }
 
-public func != <Data: Codable, T: Equatable>(_ lhs: KeyPath<Data, T>, _ rhs: T) -> Filter<Data> {
+public func != <Record: Codable, Value: Equatable>(_ lhs: KeyPath<Record, Value>, _ rhs: Value) -> Filter<Record> {
     return .init(lhs, notEqual: rhs)
 }
 
-public func < <Data: Codable, T: Comparable>(_ lhs: KeyPath<Data, T>, _ rhs: T) -> Filter<Data> {
-    return .init(lhs, lessThan: rhs)
+public func < <Record: Codable, Value: Comparable>(_ lhs: KeyPath<Record, Value>, _ rhs: Value) -> Filter<Record> {
+    return .init(lhs, lessValuehan: rhs)
 }
 
-public func <= <Data: Codable, T: Comparable>(_ lhs: KeyPath<Data, T>, _ rhs: T) -> Filter<Data> {
-    return .init(lhs, lessThanOrEqual: rhs)
+public func <= <Record: Codable, Value: Comparable>(_ lhs: KeyPath<Record, Value>, _ rhs: Value) -> Filter<Record> {
+    return .init(lhs, lessValuehanOrEqual: rhs)
 }
 
-public func > <Data: Codable, T: Comparable>(_ lhs: KeyPath<Data, T>, _ rhs: T) -> Filter<Data> {
-    return .init(lhs, greaterThan: rhs)
+public func > <Record: Codable, Value: Comparable>(_ lhs: KeyPath<Record, Value>, _ rhs: Value) -> Filter<Record> {
+    return .init(lhs, greaterValuehan: rhs)
 }
 
-public func >= <Data: Codable, T: Comparable>(_ lhs: KeyPath<Data, T>, _ rhs: T) -> Filter<Data> {
-    return .init(lhs, greaterThanOrEqual: rhs)
+public func >= <Record: Codable, Value: Comparable>(_ lhs: KeyPath<Record, Value>, _ rhs: Value) -> Filter<Record> {
+    return .init(lhs, greaterValuehanOrEqual: rhs)
 }
 
-public func && <Data: Codable>(_ lhs: Filter<Data>, _ rhs: Filter<Data>) -> Filter<Data> {
+public func && <Record: Codable>(_ lhs: Filter<Record>, _ rhs: Filter<Record>) -> Filter<Record> {
     return .init(lhs, rhs)
 }
