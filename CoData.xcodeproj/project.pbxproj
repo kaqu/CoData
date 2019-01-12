@@ -28,6 +28,8 @@
 		40700A8021EA78D50070B434 /* ArchiveDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40700A7F21EA78D50070B434 /* ArchiveDecoder.swift */; };
 		40700A8521EA81C20070B434 /* RecordsCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40700A8421EA81C20070B434 /* RecordsCache.swift */; };
 		40700A8721EA83C10070B434 /* StorageEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40700A8621EA83C10070B434 /* StorageEvent.swift */; };
+		40E7294921EA8E5500619584 /* MigrationObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E7294821EA8E5500619584 /* MigrationObject.swift */; };
+		40E7294B21EA8FA800619584 /* RecordMigration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E7294A21EA8FA800619584 /* RecordMigration.swift */; };
 		OBJ_100 /* SignalMerger.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* SignalMerger.swift */; };
 		OBJ_101 /* SignalScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* SignalScheduler.swift */; };
 		OBJ_102 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* Subscription.swift */; };
@@ -96,6 +98,8 @@
 		40700A7F21EA78D50070B434 /* ArchiveDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveDecoder.swift; sourceTree = "<group>"; };
 		40700A8421EA81C20070B434 /* RecordsCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsCache.swift; sourceTree = "<group>"; };
 		40700A8621EA83C10070B434 /* StorageEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageEvent.swift; sourceTree = "<group>"; };
+		40E7294821EA8E5500619584 /* MigrationObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MigrationObject.swift; sourceTree = "<group>"; };
+		40E7294A21EA8FA800619584 /* RecordMigration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordMigration.swift; sourceTree = "<group>"; };
 		"CoData::CoData::Product" /* CoData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CoData::CoDataTests::Product" /* CoDataTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = CoDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Futura::Futura::Product" /* Futura.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Futura.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +163,15 @@
 				40700A8421EA81C20070B434 /* RecordsCache.swift */,
 			);
 			path = Cache;
+			sourceTree = "<group>";
+		};
+		40E7294721EA8E4400619584 /* Migrations */ = {
+			isa = PBXGroup;
+			children = (
+				40E7294821EA8E5500619584 /* MigrationObject.swift */,
+				40E7294A21EA8FA800619584 /* RecordMigration.swift */,
+			);
+			path = Migrations;
 			sourceTree = "<group>";
 		};
 		OBJ_11 /* Persistence */ = {
@@ -286,7 +299,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -295,7 +308,6 @@
 				OBJ_19 /* Dependencies */,
 				OBJ_47 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -309,6 +321,7 @@
 		OBJ_8 /* CoData */ = {
 			isa = PBXGroup;
 			children = (
+				40E7294721EA8E4400619584 /* Migrations */,
 				40700A8321EA81B50070B434 /* Cache */,
 				OBJ_11 /* Persistence */,
 				OBJ_13 /* Storage */,
@@ -414,7 +427,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_47 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -445,11 +458,13 @@
 				40700A8021EA78D50070B434 /* ArchiveDecoder.swift in Sources */,
 				40700A7C21EA67A00070B434 /* StorageID.swift in Sources */,
 				40700A8721EA83C10070B434 /* StorageEvent.swift in Sources */,
+				40E7294921EA8E5500619584 /* MigrationObject.swift in Sources */,
 				40700A7821EA58A30070B434 /* Filter.swift in Sources */,
 				40700A8521EA81C20070B434 /* RecordsCache.swift in Sources */,
 				40700A7621EA4BA30070B434 /* Stored.swift in Sources */,
 				40700A7E21EA78C80070B434 /* ArchiveEncoder.swift in Sources */,
 				OBJ_57 /* Archiver.swift in Sources */,
+				40E7294B21EA8FA800619584 /* RecordMigration.swift in Sources */,
 				OBJ_58 /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
