@@ -2,17 +2,25 @@ import Foundation
 
 public struct Filter<Record> {
     public static var all: Filter<Record> { return .init { _ in true } }
-    
+
     internal let filter: (Record) -> Bool
 
     public init(_ filter: @escaping (Record) -> Bool) {
         self.filter = filter
     }
 
-    public init(_ filters: Filter<Record>...) {
+    public init(allOf filters: Filter<Record>...) {
         self.filter = { data in
             filters.reduce(into: true, { result, filter in
                 result = result && filter.filter(data)
+            })
+        }
+    }
+
+    public init(anyOf filters: Filter<Record>...) {
+        self.filter = { data in
+            filters.reduce(into: true, { result, filter in
+                result = result || filter.filter(data)
             })
         }
     }
@@ -57,7 +65,7 @@ internal extension Filter {
 }
 
 public extension Decodable {
-    static var all: Filter<Self> { return .init { _ in true } }
+    static var allRecords: Filter<Self> { return .init { _ in true } }
 }
 
 public func == <Record: Codable, Value: Equatable>(_ lhs: KeyPath<Record, Value>, _ rhs: Value) -> Filter<Record> {
@@ -85,5 +93,9 @@ public func >= <Record: Codable, Value: Comparable>(_ lhs: KeyPath<Record, Value
 }
 
 public func && <Record: Codable>(_ lhs: Filter<Record>, _ rhs: Filter<Record>) -> Filter<Record> {
-    return .init(lhs, rhs)
+    return .init(allOf: lhs, rhs)
+}
+
+public func || <Record: Codable>(_ lhs: Filter<Record>, _ rhs: Filter<Record>) -> Filter<Record> {
+    return .init(anyOf: lhs, rhs)
 }

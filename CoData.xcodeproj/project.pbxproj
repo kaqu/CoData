@@ -26,6 +26,8 @@
 		40700A7C21EA67A00070B434 /* StorageID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40700A7B21EA67A00070B434 /* StorageID.swift */; };
 		40700A7E21EA78C80070B434 /* ArchiveEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40700A7D21EA78C80070B434 /* ArchiveEncoder.swift */; };
 		40700A8021EA78D50070B434 /* ArchiveDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40700A7F21EA78D50070B434 /* ArchiveDecoder.swift */; };
+		40700A8521EA81C20070B434 /* RecordsCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40700A8421EA81C20070B434 /* RecordsCache.swift */; };
+		40700A8721EA83C10070B434 /* StorageEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40700A8621EA83C10070B434 /* StorageEvent.swift */; };
 		OBJ_100 /* SignalMerger.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* SignalMerger.swift */; };
 		OBJ_101 /* SignalScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* SignalScheduler.swift */; };
 		OBJ_102 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* Subscription.swift */; };
@@ -92,6 +94,8 @@
 		40700A7B21EA67A00070B434 /* StorageID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageID.swift; sourceTree = "<group>"; };
 		40700A7D21EA78C80070B434 /* ArchiveEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveEncoder.swift; sourceTree = "<group>"; };
 		40700A7F21EA78D50070B434 /* ArchiveDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveDecoder.swift; sourceTree = "<group>"; };
+		40700A8421EA81C20070B434 /* RecordsCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsCache.swift; sourceTree = "<group>"; };
+		40700A8621EA83C10070B434 /* StorageEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageEvent.swift; sourceTree = "<group>"; };
 		"CoData::CoData::Product" /* CoData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CoData::CoDataTests::Product" /* CoDataTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = CoDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Futura::Futura::Product" /* Futura.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Futura.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +153,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		40700A8321EA81B50070B434 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				40700A8421EA81C20070B434 /* RecordsCache.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
 		OBJ_11 /* Persistence */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_14 /* Storage.swift */,
+				40700A8621EA83C10070B434 /* StorageEvent.swift */,
 				40700A7721EA58A30070B434 /* Filter.swift */,
 				40700A7521EA4BA30070B434 /* Stored.swift */,
 				40700A7B21EA67A00070B434 /* StorageID.swift */,
@@ -296,6 +309,7 @@
 		OBJ_8 /* CoData */ = {
 			isa = PBXGroup;
 			children = (
+				40700A8321EA81B50070B434 /* Cache */,
 				OBJ_11 /* Persistence */,
 				OBJ_13 /* Storage */,
 			);
@@ -430,7 +444,9 @@
 			files = (
 				40700A8021EA78D50070B434 /* ArchiveDecoder.swift in Sources */,
 				40700A7C21EA67A00070B434 /* StorageID.swift in Sources */,
+				40700A8721EA83C10070B434 /* StorageEvent.swift in Sources */,
 				40700A7821EA58A30070B434 /* Filter.swift in Sources */,
+				40700A8521EA81C20070B434 /* RecordsCache.swift in Sources */,
 				40700A7621EA4BA30070B434 /* Stored.swift in Sources */,
 				40700A7E21EA78C80070B434 /* ArchiveEncoder.swift in Sources */,
 				OBJ_57 /* Archiver.swift in Sources */,

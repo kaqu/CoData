@@ -1,5 +1,5 @@
 /// Data stored in database with its identifier
-public struct Stored<Record: Codable>: Codable {
+public struct Stored<Record: Codable> {
     public let storageID: StorageID<Record>
     public let record: Record
     
