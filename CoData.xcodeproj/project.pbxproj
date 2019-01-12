@@ -1,0 +1,810 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		"CoData::CoDataPackageTests::ProductTarget" /* CoDataPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_70 /* Build configuration list for PBXAggregateTarget "CoDataPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_73 /* PBXTargetDependency */,
+			);
+			name = CoDataPackageTests;
+			productName = CoDataPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		40700A7621EA4BA30070B434 /* Stored.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40700A7521EA4BA30070B434 /* Stored.swift */; };
+		40700A7821EA58A30070B434 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40700A7721EA58A30070B434 /* Filter.swift */; };
+		40700A7C21EA67A00070B434 /* StorageID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40700A7B21EA67A00070B434 /* StorageID.swift */; };
+		40700A7E21EA78C80070B434 /* ArchiveEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40700A7D21EA78C80070B434 /* ArchiveEncoder.swift */; };
+		40700A8021EA78D50070B434 /* ArchiveDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40700A7F21EA78D50070B434 /* ArchiveDecoder.swift */; };
+		OBJ_100 /* SignalMerger.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* SignalMerger.swift */; };
+		OBJ_101 /* SignalScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* SignalScheduler.swift */; };
+		OBJ_102 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* Subscription.swift */; };
+		OBJ_103 /* SubscriptionCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* SubscriptionCollector.swift */; };
+		OBJ_104 /* Mutex.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* Mutex.swift */; };
+		OBJ_105 /* RecursiveLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* RecursiveLock.swift */; };
+		OBJ_106 /* DispatchQueueWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* DispatchQueueWorker.swift */; };
+		OBJ_107 /* ExecutionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* ExecutionContext.swift */; };
+		OBJ_108 /* OperationQueueWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* OperationQueueWorker.swift */; };
+		OBJ_109 /* Worker.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* Worker.swift */; };
+		OBJ_116 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* Package.swift */; };
+		OBJ_57 /* Archiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Archiver.swift */; };
+		OBJ_58 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Storage.swift */; };
+		OBJ_60 /* Futura.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Futura::Futura::Product" /* Futura.framework */; };
+		OBJ_68 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_82 /* CoData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CoData::CoData::Product" /* CoData.framework */; };
+		OBJ_83 /* Futura.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Futura::Futura::Product" /* Futura.framework */; };
+		OBJ_90 /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* Future.swift */; };
+		OBJ_91 /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* Promise.swift */; };
+		OBJ_92 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* Result.swift */; };
+		OBJ_93 /* Emitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Emitter.swift */; };
+		OBJ_94 /* Signal.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* Signal.swift */; };
+		OBJ_95 /* SignalFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* SignalFilter.swift */; };
+		OBJ_96 /* SignalFlatMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* SignalFlatMapper.swift */; };
+		OBJ_97 /* SignalForwarder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* SignalForwarder.swift */; };
+		OBJ_98 /* SignalFutureFlatMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* SignalFutureFlatMapper.swift */; };
+		OBJ_99 /* SignalMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* SignalMapper.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		40700A7121EA4AAC0070B434 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Futura::Futura";
+			remoteInfo = Futura;
+		};
+		40700A7221EA4AAC0070B434 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "CoData::CoData";
+			remoteInfo = CoData;
+		};
+		40700A7321EA4AAC0070B434 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Futura::Futura";
+			remoteInfo = Futura;
+		};
+		40700A7421EA4AAF0070B434 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "CoData::CoDataTests";
+			remoteInfo = CoDataTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		40700A7521EA4BA30070B434 /* Stored.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stored.swift; sourceTree = "<group>"; };
+		40700A7721EA58A30070B434 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		40700A7B21EA67A00070B434 /* StorageID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageID.swift; sourceTree = "<group>"; };
+		40700A7D21EA78C80070B434 /* ArchiveEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveEncoder.swift; sourceTree = "<group>"; };
+		40700A7F21EA78D50070B434 /* ArchiveDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveDecoder.swift; sourceTree = "<group>"; };
+		"CoData::CoData::Product" /* CoData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"CoData::CoDataTests::Product" /* CoDataTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = CoDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		"Futura::Futura::Product" /* Futura.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Futura.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_12 /* Archiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archiver.swift; sourceTree = "<group>"; };
+		OBJ_14 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		OBJ_23 /* Future.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Future.swift; sourceTree = "<group>"; };
+		OBJ_24 /* Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
+		OBJ_25 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		OBJ_27 /* Emitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emitter.swift; sourceTree = "<group>"; };
+		OBJ_28 /* Signal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signal.swift; sourceTree = "<group>"; };
+		OBJ_29 /* SignalFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalFilter.swift; sourceTree = "<group>"; };
+		OBJ_30 /* SignalFlatMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalFlatMapper.swift; sourceTree = "<group>"; };
+		OBJ_31 /* SignalForwarder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalForwarder.swift; sourceTree = "<group>"; };
+		OBJ_32 /* SignalFutureFlatMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalFutureFlatMapper.swift; sourceTree = "<group>"; };
+		OBJ_33 /* SignalMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalMapper.swift; sourceTree = "<group>"; };
+		OBJ_34 /* SignalMerger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalMerger.swift; sourceTree = "<group>"; };
+		OBJ_35 /* SignalScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalScheduler.swift; sourceTree = "<group>"; };
+		OBJ_36 /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		OBJ_37 /* SubscriptionCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionCollector.swift; sourceTree = "<group>"; };
+		OBJ_39 /* Mutex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mutex.swift; sourceTree = "<group>"; };
+		OBJ_40 /* RecursiveLock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecursiveLock.swift; sourceTree = "<group>"; };
+		OBJ_42 /* DispatchQueueWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueueWorker.swift; sourceTree = "<group>"; };
+		OBJ_43 /* ExecutionContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExecutionContext.swift; sourceTree = "<group>"; };
+		OBJ_44 /* OperationQueueWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationQueueWorker.swift; sourceTree = "<group>"; };
+		OBJ_45 /* Worker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Worker.swift; sourceTree = "<group>"; };
+		OBJ_46 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/kaqu/Miquido/Projects/CoData/.build/checkouts/futura.git-9005754180996757158/Package.swift"; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_110 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_60 /* Futura.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_82 /* CoData.framework in Frameworks */,
+				OBJ_83 /* Futura.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		OBJ_11 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_12 /* Archiver.swift */,
+				40700A7D21EA78C80070B434 /* ArchiveEncoder.swift */,
+				40700A7F21EA78D50070B434 /* ArchiveDecoder.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		OBJ_13 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_14 /* Storage.swift */,
+				40700A7721EA58A30070B434 /* Filter.swift */,
+				40700A7521EA4BA30070B434 /* Stored.swift */,
+				40700A7B21EA67A00070B434 /* StorageID.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		OBJ_15 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_16 /* CoDataTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_16 /* CoDataTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = CoDataTests;
+			path = Tests/CoDataTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_19 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_20 /* Futura */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		OBJ_20 /* Futura */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_21 /* Futura */,
+				OBJ_46 /* Package.swift */,
+			);
+			name = Futura;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_21 /* Futura */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_22 /* Future */,
+				OBJ_25 /* Result.swift */,
+				OBJ_26 /* Signal */,
+				OBJ_38 /* Synchronization */,
+				OBJ_41 /* Worker */,
+			);
+			name = Futura;
+			path = ".build/checkouts/futura.git-9005754180996757158/Sources/Futura";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_22 /* Future */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_23 /* Future.swift */,
+				OBJ_24 /* Promise.swift */,
+			);
+			path = Future;
+			sourceTree = "<group>";
+		};
+		OBJ_26 /* Signal */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_27 /* Emitter.swift */,
+				OBJ_28 /* Signal.swift */,
+				OBJ_29 /* SignalFilter.swift */,
+				OBJ_30 /* SignalFlatMapper.swift */,
+				OBJ_31 /* SignalForwarder.swift */,
+				OBJ_32 /* SignalFutureFlatMapper.swift */,
+				OBJ_33 /* SignalMapper.swift */,
+				OBJ_34 /* SignalMerger.swift */,
+				OBJ_35 /* SignalScheduler.swift */,
+				OBJ_36 /* Subscription.swift */,
+				OBJ_37 /* SubscriptionCollector.swift */,
+			);
+			path = Signal;
+			sourceTree = "<group>";
+		};
+		OBJ_38 /* Synchronization */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_39 /* Mutex.swift */,
+				OBJ_40 /* RecursiveLock.swift */,
+			);
+			path = Synchronization;
+			sourceTree = "<group>";
+		};
+		OBJ_41 /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_42 /* DispatchQueueWorker.swift */,
+				OBJ_43 /* ExecutionContext.swift */,
+				OBJ_44 /* OperationQueueWorker.swift */,
+				OBJ_45 /* Worker.swift */,
+			);
+			path = Worker;
+			sourceTree = "<group>";
+		};
+		OBJ_47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"Futura::Futura::Product" /* Futura.framework */,
+				"CoData::CoData::Product" /* CoData.framework */,
+				"CoData::CoDataTests::Product" /* CoDataTests.xctest */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_15 /* Tests */,
+				OBJ_19 /* Dependencies */,
+				OBJ_47 /* Products */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* CoData */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* CoData */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_11 /* Persistence */,
+				OBJ_13 /* Storage */,
+			);
+			name = CoData;
+			path = Sources/CoData;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"CoData::CoData" /* CoData */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_52 /* Build configuration list for PBXNativeTarget "CoData" */;
+			buildPhases = (
+				OBJ_55 /* Sources */,
+				OBJ_59 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_61 /* PBXTargetDependency */,
+			);
+			name = CoData;
+			productName = CoData;
+			productReference = "CoData::CoData::Product" /* CoData.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"CoData::CoDataTests" /* CoDataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_75 /* Build configuration list for PBXNativeTarget "CoDataTests" */;
+			buildPhases = (
+				OBJ_78 /* Sources */,
+				OBJ_81 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_84 /* PBXTargetDependency */,
+				OBJ_85 /* PBXTargetDependency */,
+			);
+			name = CoDataTests;
+			productName = CoDataTests;
+			productReference = "CoData::CoDataTests::Product" /* CoDataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		"CoData::SwiftPMPackageDescription" /* CoDataPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_64 /* Build configuration list for PBXNativeTarget "CoDataPackageDescription" */;
+			buildPhases = (
+				OBJ_67 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CoDataPackageDescription;
+			productName = CoDataPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+		"Futura::Futura" /* Futura */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_86 /* Build configuration list for PBXNativeTarget "Futura" */;
+			buildPhases = (
+				OBJ_89 /* Sources */,
+				OBJ_110 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Futura;
+			productName = Futura;
+			productReference = "Futura::Futura::Product" /* Futura.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"Futura::SwiftPMPackageDescription" /* FuturaPackageDescription */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_112 /* Build configuration list for PBXNativeTarget "FuturaPackageDescription" */;
+			buildPhases = (
+				OBJ_115 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FuturaPackageDescription;
+			productName = FuturaPackageDescription;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "CoData" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_47 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"CoData::CoData" /* CoData */,
+				"CoData::SwiftPMPackageDescription" /* CoDataPackageDescription */,
+				"CoData::CoDataPackageTests::ProductTarget" /* CoDataPackageTests */,
+				"CoData::CoDataTests" /* CoDataTests */,
+				"Futura::Futura" /* Futura */,
+				"Futura::SwiftPMPackageDescription" /* FuturaPackageDescription */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_115 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_116 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_55 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				40700A8021EA78D50070B434 /* ArchiveDecoder.swift in Sources */,
+				40700A7C21EA67A00070B434 /* StorageID.swift in Sources */,
+				40700A7821EA58A30070B434 /* Filter.swift in Sources */,
+				40700A7621EA4BA30070B434 /* Stored.swift in Sources */,
+				40700A7E21EA78C80070B434 /* ArchiveEncoder.swift in Sources */,
+				OBJ_57 /* Archiver.swift in Sources */,
+				OBJ_58 /* Storage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_68 /* Package.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_90 /* Future.swift in Sources */,
+				OBJ_91 /* Promise.swift in Sources */,
+				OBJ_92 /* Result.swift in Sources */,
+				OBJ_93 /* Emitter.swift in Sources */,
+				OBJ_94 /* Signal.swift in Sources */,
+				OBJ_95 /* SignalFilter.swift in Sources */,
+				OBJ_96 /* SignalFlatMapper.swift in Sources */,
+				OBJ_97 /* SignalForwarder.swift in Sources */,
+				OBJ_98 /* SignalFutureFlatMapper.swift in Sources */,
+				OBJ_99 /* SignalMapper.swift in Sources */,
+				OBJ_100 /* SignalMerger.swift in Sources */,
+				OBJ_101 /* SignalScheduler.swift in Sources */,
+				OBJ_102 /* Subscription.swift in Sources */,
+				OBJ_103 /* SubscriptionCollector.swift in Sources */,
+				OBJ_104 /* Mutex.swift in Sources */,
+				OBJ_105 /* RecursiveLock.swift in Sources */,
+				OBJ_106 /* DispatchQueueWorker.swift in Sources */,
+				OBJ_107 /* ExecutionContext.swift in Sources */,
+				OBJ_108 /* OperationQueueWorker.swift in Sources */,
+				OBJ_109 /* Worker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Futura::Futura" /* Futura */;
+			targetProxy = 40700A7121EA4AAC0070B434 /* PBXContainerItemProxy */;
+		};
+		OBJ_73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "CoData::CoDataTests" /* CoDataTests */;
+			targetProxy = 40700A7421EA4AAF0070B434 /* PBXContainerItemProxy */;
+		};
+		OBJ_84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "CoData::CoData" /* CoData */;
+			targetProxy = 40700A7221EA4AAC0070B434 /* PBXContainerItemProxy */;
+		};
+		OBJ_85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Futura::Futura" /* Futura */;
+			targetProxy = 40700A7321EA4AAC0070B434 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_113 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		OBJ_114 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "SWIFT_PACKAGE DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = CoData.xcodeproj/CoData_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CoData;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = CoData;
+			};
+			name = Debug;
+		};
+		OBJ_54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = CoData.xcodeproj/CoData_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CoData;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = CoData;
+			};
+			name = Release;
+		};
+		OBJ_65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		OBJ_66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LD = /usr/bin/true;
+				OTHER_SWIFT_FLAGS = "-swift-version 4.2 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		OBJ_71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_76 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = CoData.xcodeproj/CoDataTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = CoDataTests;
+			};
+			name = Debug;
+		};
+		OBJ_77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = CoData.xcodeproj/CoDataTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = CoDataTests;
+			};
+			name = Release;
+		};
+		OBJ_87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = CoData.xcodeproj/Futura_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Futura;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = Futura;
+			};
+			name = Debug;
+		};
+		OBJ_88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = CoData.xcodeproj/Futura_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) $(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_CFLAGS = "$(inherited)";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = Futura;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited)";
+				SWIFT_VERSION = 4.2;
+				TARGET_NAME = Futura;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_112 /* Build configuration list for PBXNativeTarget "FuturaPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_113 /* Debug */,
+				OBJ_114 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_2 /* Build configuration list for PBXProject "CoData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_52 /* Build configuration list for PBXNativeTarget "CoData" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_53 /* Debug */,
+				OBJ_54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_64 /* Build configuration list for PBXNativeTarget "CoDataPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_65 /* Debug */,
+				OBJ_66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_70 /* Build configuration list for PBXAggregateTarget "CoDataPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_71 /* Debug */,
+				OBJ_72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_75 /* Build configuration list for PBXNativeTarget "CoDataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_76 /* Debug */,
+				OBJ_77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_86 /* Build configuration list for PBXNativeTarget "Futura" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_87 /* Debug */,
+				OBJ_88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}
